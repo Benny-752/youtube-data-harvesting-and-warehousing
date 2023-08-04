@@ -6,7 +6,7 @@ import streamlit as st
 import plotly.express as px
 import datetime
 
-st.set_page_config(page_title='YouTube Data Harvesting and Warehousing', page_icon=':bar_chart:', layout="wide")
+st.title('YouTube Data Harvesting and Warerhousing')
 pd.set_option('display.max_columns', None)
 
 
