@@ -82,18 +82,4 @@ The Streamlit app provides an intuitive interface to interact with the charts an
 
 With the combined capabilities of Plotly and Streamlit, the Data Analysis section empowers users to uncover valuable insights and make data-driven decisions.
 
-**Contributing**
 
-Contributions to this project are welcome! If you encounter any issues or have suggestions for improvements, please feel free to submit a pull request.
-
-**License**
-
-This project is licensed under the MIT License. Please review the LICENSE file for more details.
-
-**Contact**
-
-📧 Email: gopiashokankiot@gmail.com 
-
-🌐 LinkedIn: [linkedin.com/in/gopiashokan](https://www.linkedin.com/in/gopiashokan)
-
-For any further questions or inquiries, feel free to reach out. We are happy to assist you with any queries.
