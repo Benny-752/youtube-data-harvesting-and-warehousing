@@ -27,8 +27,8 @@ This section provides an overview of the project and instructions on how to get 
 
 ## Note [Ensure downloading below software if you use vscode already
 
-- [Anaconda Navigator](#https://www.anaconda.com/installation-success)
-- [install latest python version -3.11](#https://www.python.org/downloads/release/python-3110/)
+- [Anaconda Navigator](https://www.anaconda.com/installation-success)
+- [install latest python version -3.11](https://www.python.org/downloads/release/python-3110/)
 - [Make sure your drive directory doesn't inculde a space "  " character in it]
 
 ### Prerequisites
