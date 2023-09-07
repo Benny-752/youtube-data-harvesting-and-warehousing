@@ -1,7 +1,7 @@
 # YouTube Data Harvesting and Warehousing
 
-![YouTube Logo](https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AYoutube_logo.png&psig=AOvVaw054iUv61yR3IejumUbBs84&ust=1694193640368000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCMj_taWBmYEDFQAAAAAdAAAAABAE)
-![GitHub Logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
+![YouTube Logo](https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png)
+
 
 ## Overview
 
