@@ -1,13 +1,7 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Sep  7 22:07:59 2023
 
-@author: Benny Solomon
-"""
 
 # -*- coding: utf-8 -*-
 """
-Created on Wed Aug 23 10:31:31 2023
 
 @author: Benny Solomon
 """
@@ -1714,7 +1708,7 @@ if option:
             if s1 == []:
                 st.info("The SQL database is currently empty")
             else:
-                gopi_s = pymysql.connect(
+                ben_s = pymysql.connect(
                             host='localhost',
                             port=3306,
                             user='root',
@@ -1722,7 +1716,7 @@ if option:
                             database='y_tb'
                         )
 
-                cursor = gopi_s.cursor()
+                cursor = ben_s.cursor()
                 cursor.execute('select channel_name from channel order by channel_name ASC')
                 s = cursor.fetchall()
                 list_channel = ['Over All']
