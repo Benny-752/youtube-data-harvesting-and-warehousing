@@ -1,7 +1,7 @@
 # YouTube Data Harvesting and Warehousing
 
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="YouTube Logo" width="200" height="159">
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="YouTube Logo" width="200" height="139">
 
 
 
