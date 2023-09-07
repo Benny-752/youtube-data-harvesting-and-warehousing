@@ -25,7 +25,7 @@ This GitHub project, "YouTube Data Harvesting and Warehousing," is a comprehensi
 
 This section provides an overview of the project and instructions on how to get started.
 
-## Note [Ensure downloading below software if you use vscode already
+## Note [Ensure downloading below software if you use vscode already with older python
 
 - [Anaconda Navigator](https://www.anaconda.com/installation-success)
 - [install latest python version -3.11](https://www.python.org/downloads/release/python-3110/)
