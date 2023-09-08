@@ -45,7 +45,7 @@ Before you begin, make sure you have the following prerequisites installed:
 1. Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/youtube-data-harvesting-and-warehousing.git
+git clone https://github.com/Benny-752/youtube-data-harvesting-and-warehousing.git
 cd youtube-data-harvesting-and-warehousing
 ```
 
