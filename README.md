@@ -93,10 +93,6 @@ You can now use your preferred data analysis and visualization tools to analyze 
 
 Contributions to this project are welcome! If you have ideas, bug fixes, or new features to add, please submit a pull request following our [contributing guidelines](CONTRIBUTING.md).
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgments
 
 - Special thanks to the YouTube Data API for providing access to valuable YouTube data.
