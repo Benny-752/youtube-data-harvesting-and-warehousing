@@ -35,7 +35,7 @@ This section provides an overview of the project and instructions on how to get 
 
 Before you begin, make sure you have the following prerequisites installed:
 
-- Python 3.6+
+- Python 3.7+
 - Git
 - MySQL or PostgreSQL (for data warehousing)
 - Google API credentials (for YouTube data harvesting)
