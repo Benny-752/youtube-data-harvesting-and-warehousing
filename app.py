@@ -1,11 +1,5 @@
 
 
-# -*- coding: utf-8 -*-
-"""
-
-@author: Benny Solomon
-"""
-#mongodb+srv://bennysolomonsam:987datsq@cluster0.mczfhtc.mongodb.net/
 import googleapiclient.discovery
 import pandas as pd
 import pymongo
@@ -15,7 +9,7 @@ import datetime
 import pymysql
 import mysql.connector
 
-#st.set_page_config(page_title='YouTube Data Harvesting and Warehousing', page_icon=':bar_chart:', layout="wide")
+
 pd.set_option('display.max_columns', None)
 
 
