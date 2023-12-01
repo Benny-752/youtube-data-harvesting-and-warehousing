@@ -251,7 +251,7 @@ def display_sample_data(channel_id):
 
 # list of all collections in the 'project_youtube' database in MongoDB
 def list_mongodb_collection_names(database):
-    she = myclient = pymongo.MongoClient("mongodb+srv://bennysolomonsam:987datsq@cluster0.mczfhtc.mongodb.net/")
+    she = myclient = pymongo.MongoClient("mongodb+srv://")
     db = she[database]
     col = db.list_collection_names()
     col.sort(reverse=False)
@@ -274,7 +274,7 @@ def order_mongodb_collection_names():
 
 # retrive data store to MongoDB database
 def data_store_mongodb(channel_name, database, data_youtube):
-    she = myclient = pymongo.MongoClient("mongodb+srv://bennysolomonsam:987datsq@cluster0.mczfhtc.mongodb.net/")
+    she = myclient = pymongo.MongoClient("mongodb+srv://")
     db = she[database]
     col = db[channel_name]
     col.insert_one(data_youtube)
@@ -282,7 +282,7 @@ def data_store_mongodb(channel_name, database, data_youtube):
 
 # temporary database to store retrive data and finally automatically drop
 def temp_collection_drop():
-    she = myclient = pymongo.MongoClient("mongodb+srv://bennysolomonsam:987datsq@cluster0.mczfhtc.mongodb.net/")
+    she = myclient = pymongo.MongoClient("mongodb+srv://")
     db = she['temp']
     col = db.list_collection_names()
     if len(col) > 0:
@@ -291,14 +291,14 @@ def temp_collection_drop():
 
 
 def mongodb(database):
-    she = myclient = pymongo.MongoClient("mongodb+srv://bennysolomonsam:987datsq@cluster0.mczfhtc.mongodb.net/")
+    she = myclient = pymongo.MongoClient("mongodb+srv://")
     db = she['temp']
     col = db.list_collection_names()
     if len(col) == 0:
         st.info("There is no data retrived from youtube")
     else:
         data_youtube = {}
-        she = myclient = pymongo.MongoClient("mongodb+srv://bennysolomonsam:987datsq@cluster0.mczfhtc.mongodb.net/")
+        she = myclient = pymongo.MongoClient("mongodb+srv://")
         db = she['temp']
         col = db.list_collection_names()
         channel_name = col[0]
@@ -320,7 +320,7 @@ def mongodb(database):
             option = st.radio('Do you want to overwrite the data currently stored?',
                               ['Select the option below', 'Yes', 'No'])
             if option == 'Yes':
-                she = myclient = pymongo.MongoClient("mongodb+srv://bennysolomonsam:987datsq@cluster0.mczfhtc.mongodb.net/")
+                she = myclient = pymongo.MongoClient("mongodb+srv://")
                 db = she[database]
                 db[channel_name].drop()
                 data_store_mongodb(channel_name, database, data_youtube)
@@ -339,7 +339,7 @@ def sql_create_tables():
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_pro'
 )   
     cursor = she_sql.cursor()
@@ -391,7 +391,7 @@ def list_sql_channel_names():
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
 
@@ -418,7 +418,7 @@ def order_sql_channel_names():
 
 # data migrating to channel table
 def sql_channel(database, col_input):
-    she_mdb = she = myclient = pymongo.MongoClient("mongodb+srv://bennysolomonsam:987datsq@cluster0.mczfhtc.mongodb.net/")
+    she_mdb = she = myclient = pymongo.MongoClient("mongodb+srv://")
     db = she_mdb[database]
     col = db[col_input]
 
@@ -439,7 +439,7 @@ def sql_channel(database, col_input):
 
 # data migrating to playlist table
 def sql_playlists(database, col_input):
-    she_mdb = she = myclient = pymongo.MongoClient("mongodb+srv://bennysolomonsam:987datsq@cluster0.mczfhtc.mongodb.net/")
+    she_mdb = she = myclient = pymongo.MongoClient("mongodb+srv:")
     db = she_mdb[database]
     col = db[col_input]
 
@@ -457,7 +457,7 @@ def sql_playlists(database, col_input):
 
 # data migrating to video table
 def sql_videos(database, col_input):
-    she_mdb = she = myclient = pymongo.MongoClient("mongodb+srv://bennysolomonsam:987datsq@cluster0.mczfhtc.mongodb.net/")
+    she_mdb = she = myclient = pymongo.MongoClient("mongodb+srv")
     db = she_mdb[database]
     col = db[col_input]
 
@@ -487,7 +487,7 @@ def sql_videos(database, col_input):
 
 # data migrating to comment table
 def sql_comments(database, col_input):
-    she_mdb = she = myclient = pymongo.MongoClient("mongodb+srv://bennysolomonsam:987datsq@cluster0.mczfhtc.mongodb.net/")
+    she_mdb = she = myclient = pymongo.MongoClient("mongodb+srv://")
     db = she_mdb[database]
     col = db[col_input]
 
@@ -558,7 +558,7 @@ def sql(database):
                 host='localhost',
                 port=3306,
                 user='root',
-                password='ben',
+                password='',
                 database='y_pro'
                 )
                 cursor = she_sql.cursor()
@@ -620,7 +620,7 @@ def channel_totalplaylists_selectchannelnames(channel):
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
     cursor = she_s.cursor()
@@ -646,7 +646,7 @@ def channels_channelnames_totalplaylists():
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )    
     cursor = she_s.cursor()
@@ -669,7 +669,7 @@ def channels_channelnames_totalvideos():
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
     cursor = she_s.cursor()
@@ -693,7 +693,7 @@ def channels_channelnames_publishvideos(start_date, end_date):
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
 
@@ -718,7 +718,7 @@ def channels_channelnames_subscriptions():
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
 
@@ -740,7 +740,7 @@ def channels_channelnames_views():
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
 
@@ -762,7 +762,7 @@ def channels_channelnames_totallikes():
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
 
@@ -791,7 +791,7 @@ def channels_channelnames_totalcomments():
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
 
@@ -826,7 +826,7 @@ def channels_channelnames_totaldurations():
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
 
@@ -852,7 +852,7 @@ def channels_channelnames_avgdurations():
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
 
@@ -1019,7 +1019,7 @@ def videos_videonames_channelnames():
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
 
@@ -1046,7 +1046,7 @@ def videos_videonames_selectchannel(channel):
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
 
@@ -1074,7 +1074,7 @@ def videos_videonames_totalviews():
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
 
@@ -1101,7 +1101,7 @@ def videos_videonames_selectviews(channel):
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
 
@@ -1128,7 +1128,7 @@ def videos_videonames_totallikes():
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
 
@@ -1155,7 +1155,7 @@ def videos_videonames_selectlikes(channel):
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
     cursor = she_s.cursor()
@@ -1181,7 +1181,7 @@ def videos_videonames_totalcommentscount():
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
 
@@ -1208,7 +1208,7 @@ def videos_videonames_selectcommentscount(channel):
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
 
@@ -1236,7 +1236,7 @@ def videos_videonames_totalcomments():
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
 
@@ -1264,7 +1264,7 @@ def videos_videonames_selectcomments(channel):
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
 
@@ -1293,7 +1293,7 @@ def videos_videonames_totaldurations():
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
 
@@ -1320,7 +1320,7 @@ def videos_videonames_selectdurations(channel):
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
 
@@ -1367,7 +1367,7 @@ def q1_allvideoname_channelname():
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
 
@@ -1393,7 +1393,7 @@ def q2_channelname_totalvideos():
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
 
@@ -1419,7 +1419,7 @@ def q3_mostviewvideos_channelname():
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
 
@@ -1445,7 +1445,7 @@ def q4_videonames_totalcomments():
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
 
@@ -1471,7 +1471,7 @@ def q5_videonames_highestlikes_channelname():
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
 
@@ -1497,7 +1497,7 @@ def q6_videonames_totallikes_channelname():
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
 
@@ -1523,7 +1523,7 @@ def q7_channelnames_totalviews():
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
 
@@ -1544,7 +1544,7 @@ def q8_channelnames_releasevideos(year):
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
 
@@ -1566,7 +1566,7 @@ def q8_channelnames_releasevideos(year):
 
 
 def q9_channelnames_avgvideoduration():
-    she_sql = mysql.connector.connect(host='localhost', port=3306,user='root', password='ben',        database='y_tb')
+    she_sql = mysql.connector.connect(host='localhost', port=3306,user='root', password='',        database='y_tb')
     cursor = she_sql.cursor()
     cursor.execute("SELECT\
                     channel.channel_name,\
@@ -1593,7 +1593,7 @@ def q10_videonames_channelnames_mostcomments():
     host='localhost',
     port=3306,
     user='root',
-    password='ben',
+    password='',
     database='y_tb'
 )
 
@@ -1706,7 +1706,7 @@ if option:
                             host='localhost',
                             port=3306,
                             user='root',
-                            password='ben',
+                            password='',
                             database='y_tb'
                         )
 
