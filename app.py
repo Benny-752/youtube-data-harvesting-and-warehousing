@@ -584,7 +584,7 @@ def sql(database):
 # List of all channels
 def channels_totalchannels():
     st.subheader('List of Channels')
-    she_s = mysql.connector.connect(host='localhost', port=3306,user='root', password='ben',        database='y_tb')
+    she_s = mysql.connector.connect(host='localhost', port=3306,user='root', password='',        database='y_tb')
     cursor = she_s.cursor()
     cursor.execute("select channel_name from channel order by channel_name ASC")
     s = cursor.fetchall()
