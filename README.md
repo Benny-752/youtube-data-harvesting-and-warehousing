@@ -18,8 +18,6 @@ This GitHub project, "YouTube Data Harvesting and Warehousing," is a comprehensi
 - [Data Harvesting](#data-harvesting)
 - [Data Warehousing](#data-warehousing)
 - [Analysis and Visualization](#analysis-and-visualization)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Getting Started
 
@@ -49,17 +47,13 @@ git clone https://github.com/Benny-752/youtube-data-harvesting-and-warehousing.g
 cd youtube-data-harvesting-and-warehousing
 ```
 
-2. Install the required Python packages:
+2. Install the required Python packages
 
-```bash
-pip install -r requirements.txt
-```
-
-3. Set up your database (MySQL or PostgreSQL) and configure the database connection in the `config.py` file.
+3. Set up your database (MySQL or PostgreSQL) and configure the database connection.
 
 4. Obtain Google API credentials by following the instructions in the [Google API Documentation](https://developers.google.com/youtube/registering_an_application).
 
-5. Configure your Google API credentials in the `config.py` file.
+5. Configure your Google API credentials.
 
 ## Usage
 
@@ -67,23 +61,14 @@ This section describes how to use the project for YouTube data harvesting and wa
 
 ### Data Harvesting
 
-To harvest data from YouTube, run the following command:
+To harvest data from YouTube, use the api key and get the channel details
 
-```bash
-python harvest_data.py
-```
-
-This script will fetch the latest YouTube videos, comments, and other relevant data based on your specified search criteria and store it in your database.
 
 ### Data Warehousing
 
-To store and warehouse the harvested data in your database, run the following command:
+To store and warehouse the harvested data in your database, use MongodB
 
-```bash
-python warehouse_data.py
-```
 
-This script will organize and store the collected data in your MySQL or PostgreSQL database for further analysis.
 
 ### Analysis and Visualization
 
