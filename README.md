@@ -89,9 +89,7 @@ This script will organize and store the collected data in your MySQL or PostgreS
 
 You can now use your preferred data analysis and visualization tools to analyze and visualize the YouTube data stored in your database.
 
-## Contributing
 
-Contributions to this project are welcome! If you have ideas, bug fixes, or new features to add, please submit a pull request following our [contributing guidelines](CONTRIBUTING.md).
 
 ## Acknowledgments
 
